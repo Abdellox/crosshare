@@ -1444,6 +1444,12 @@ export const Puzzle = ({
             ) : (
               ''
             )}
+            {!isSlate &&
+            (state.currentTimeWindowStart !== 0 || state.success) ? (
+              <div className={styles.puzzleTitle}>{puzzle.title}</div>
+            ) : (
+              ''
+            )}
             <div tabIndex={0} role={'textbox'} className={styles.puzzleWrap}>
               {puzzleView}
             </div>
